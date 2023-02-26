@@ -254,80 +254,53 @@ footer{
         }
     }
   }
-
-  @media (min-width: 769px) {
-    &__img {
-      width: calc((100% / 2) - 2rem);
-      height: auto;
-    }
-
-    &__div {
-      width: calc((100% / 2) - 2rem);
-    }
-    gap: 2rem;
-  }
-  @media (max-width: 768px) {
-    flex-direction: column-reverse;
-
-    &__img {
-      width: 100%;
-      height: auto;
-      order: -1;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
-    &__div {
-      text-align: center;
-      padding: 1rem;
-    }
-  }
 }
 
 .c-footer {
   border-top: 1px solid $color-orange;
   background: $color-dark-blue;
   padding: 1.5rem;
-  &__div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+  // &__div {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   padding: 1rem;
+  //   border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
 
-    @media (max-width: 768px) {
-      flex-direction: column;
-    }
-  }
-  &__list {
-    list-style: none;
-    @media (max-width: 768px) {
-      margin-top: 0.75rem;
-    }
-  }
+  //   @media (max-width: 768px) {
+  //     flex-direction: column;
+  //   }
+  // }
+  // &__list {
+  //   list-style: none;
+  //   @media (max-width: 768px) {
+  //     margin-top: 0.75rem;
+  //   }
+  // }
 
-  &__item {
-    display: inline-block;
+  // &__item {
+  //   display: inline-block;
 
-    @media (max-width: 576px) {
-        display: block;
-        margin-top: 0.75rem;
-        margin-bottom: 0.75rem;
-    }
-  }
+  //   @media (max-width: 576px) {
+  //       display: block;
+  //       margin-top: 0.75rem;
+  //       margin-bottom: 0.75rem;
+  //   }
+  // }
 
-  &__link {
-    color: $color-white;
-    text-decoration: none;
-    margin: 1rem;
-  }
+  // &__link {
+  //   color: $color-white;
+  //   text-decoration: none;
+  //   margin: 1rem;
+  // }
 
-  &__div2 {
-    padding-top: 1rem;
-    color: white;
-    text-align: center;
-    font-size: 0.75rem;
-    font-style: italic;
-  }
+  // &__div2 {
+  //   padding-top: 1rem;
+  //   color: white;
+  //   text-align: center;
+  //   font-size: 0.75rem;
+  //   font-style: italic;
+  // }
 }
 /*---------------------------------------/*
  # UTILITIES
