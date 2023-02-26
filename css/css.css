@@ -29,7 +29,8 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -180,7 +181,34 @@ footer {
   margin-top: 1rem;
   text-align: center;
   flex-basis: 100%;
-  border-bottom: 1px solid #F88767;
+  border-bottom: 1px solid #f88767;
+}
+
+.c-timeline__title {
+  font-size: 2rem;
+  margin-top: 1rem;
+  text-align: center;
+  flex-basis: 100%;
+  border-bottom: 1px solid #f88767;
+}
+
+.c-timeline-article {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  background-color: lightblue;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.c-timeline-article__title {
+  text-align: center;
+  font-size: 1.5rem;
+  border-bottom: 1px dotted black;
+}
+.c-timeline-article__text {
+  text-align: center;
+}
+.c-timeline-article__div {
+  margin-bottom: 1.5rem;
 }
 
 .c-article {
@@ -205,9 +233,6 @@ footer {
   .c-article {
     flex-basis: 100%;
   }
-}
-.c-article--midle {
-  flex-direction: row-reverse;
 }
 .c-article__title {
   font-size: 1.5rem;
@@ -236,7 +261,7 @@ footer {
 }
 
 .c-footer {
-  border-top: 1px solid #F88767;
+  border-top: 1px solid #f88767;
   background: lightblue;
   padding: 1.5rem;
 }
