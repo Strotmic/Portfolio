@@ -184,6 +184,11 @@ footer {
   border-bottom: 1px solid #f88767;
 }
 
+.c-timeline {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 60rem;
+}
 .c-timeline__title {
   font-size: 2rem;
   margin-top: 1rem;
