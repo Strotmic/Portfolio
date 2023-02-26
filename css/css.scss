@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:wght@500&display=swap");
+
+/*---------------------------------------/*
+ # SETTINGS
+/*---------------------------------------*/
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+$color-dark-pink: #a75b69;
+$color-white: #fff;
+$color-pink: #0062cc;
+$color-dark-blue: lightblue;
+$color-orange: #F88767;
+$spacing-default: 2rem;
+$gap-nav: 2rem;
+$gap-phone: 2rem;
+/*---------------------------------------/*
+ # GENERIC
+/*---------------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+/*---------------------------------------/*
+ # ELEMENTS
+/*---------------------------------------*/
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+h2 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+h3 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+}
+
+p {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+}
+
+footer{
+    background-color: lightblue;
+}
+
+/*---------------------------------------/*
+ # OBJECTS
+/*---------------------------------------*/
+.o-container {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+  
+
+
+/*---------------------------------------/*
+ # COMPONENTS
+/*---------------------------------------*/
+.nav{
+    background: lightblue;
+}
+.c-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    gap: $gap-nav;
+  }
+
+  &__list {
+    list-style-type: none;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    gap: calc($gap-nav * 2);
+  }
+
+  &__link {
+    color: $color-dark-pink;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover,
+    &--active {
+      color: $color-pink;
+    }
+  }
+}
+
+.c-header {
+  background-image: url(../media/images/849.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  color: black;
+  justify-content: center;
+
+  &__text {
+    max-width: 50rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  &__container{
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__button {
+    &--link {
+      color: $color-white;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: $color-dark-pink;
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      border-radius: 0.5rem;
+      border: 2px solid $color-dark-pink;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+        color: $color-dark-pink;
+
+      }
+    }
+  }
+  &__caption {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 0.5rem 0 0 0;
+
+  }
+}
+
+.c-skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    &__title{
+        font-size: 2rem;
+        margin-top: 1rem;
+        text-align: center;
+        flex-basis: 100%;
+        border-bottom: 1px solid $color-orange;
+
+    }
+}
+
+.c-article {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: $color-dark-blue;
+  border-radius: 1rem;
+  flex-basis: calc((100% / 4) - ( 1rem * 3 / 4));
+  padding: 1rem;
+
+  @media (max-width: 1200px) {
+    flex-basis: calc((100% / 3) - ( 1rem * 2 / 3));
+  }
+
+  @media (max-width: 992px) {
+    flex-basis: calc((100% / 2) - ( 1rem * 1 / 2));
+  }
+
+  @media (max-width: 576px) {
+    flex-basis: calc((100% / 1));
+  }
+
+  &--midle {
+    flex-direction: row-reverse;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  &__text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  &-links {
+    display: flex;
+    justify-content: space-around;
+    &__link{
+        color: $color-white;
+        font-weight: bold;
+        text-decoration: none;
+        background-color: $color-dark-pink;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        border-radius: 0.5rem;
+        border: 2px solid $color-dark-pink;
+  
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.3);
+          color: $color-dark-pink;
+  
+        }
+    }
+  }
+
+  @media (min-width: 769px) {
+    &__img {
+      width: calc((100% / 2) - 2rem);
+      height: auto;
+    }
+
+    &__div {
+      width: calc((100% / 2) - 2rem);
+    }
+    gap: 2rem;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+
+    &__img {
+      width: 100%;
+      height: auto;
+      order: -1;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    &__div {
+      text-align: center;
+      padding: 1rem;
+    }
+  }
+}
+
+.c-footer {
+  border-top: 1px solid $color-orange;
+  background: $color-dark-blue;
+  padding: 1.5rem;
+  &__div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  &__list {
+    list-style: none;
+    @media (max-width: 768px) {
+      margin-top: 0.75rem;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+
+    @media (max-width: 576px) {
+        display: block;
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+  }
+
+  &__link {
+    color: $color-white;
+    text-decoration: none;
+    margin: 1rem;
+  }
+
+  &__div2 {
+    padding-top: 1rem;
+    color: white;
+    text-align: center;
+    font-size: 0.75rem;
+    font-style: italic;
+  }
+}
+/*---------------------------------------/*
+ # UTILITIES
+/*---------------------------------------*/
+
