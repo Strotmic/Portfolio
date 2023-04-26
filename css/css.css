@@ -315,6 +315,12 @@ footer {
   background-color: rgba(255, 255, 255, 0.3);
   color: #a75b69;
 }
+.c-article__ul {
+  list-style: none;
+}
+.c-article__li {
+  text-decoration: none;
+}
 
 .c-footer {
   border-top: 1px solid #f88767;
